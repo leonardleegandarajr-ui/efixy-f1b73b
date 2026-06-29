@@ -24,7 +24,35 @@ tailwind.config = {
 </script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9061305074429197" crossorigin="anonymous"></script>
-<style>
+<style>.header-ad { margin: 12px 0; }
+
+.sidebar-ad-left {
+  position: sticky;
+  top: 80px;
+  margin-top: 16px;
+}
+@media (max-width: 1024px) {
+  .sidebar-ad-left { display: none; }
+}
+
+.incontent-ad { margin: 32px 0; }
+
+.footer-ad { margin: 24px 0; }
+
+.mobile-sticky-ad {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 6px 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+@media (min-width: 1024px) {
+  .mobile-sticky-ad { display: none; }
+}
+
 :root { --sidebar-w: 280px; }
 * { box-sizing: border-box; }
 body { font-family: 'Inter', system-ui, sans-serif; margin:0; background:#f8fafc; color:#1e293b; font-size:16px; line-height:1.7; }
@@ -127,10 +155,9 @@ body { font-family: 'Inter', system-ui, sans-serif; margin:0; background:#f8fafc
     </button>
   </div>
   <nav data-id="10" id="sidebar-nav" class="flex-1 p-3 space-y-1 overflow-y-auto">
-    <div data-id="11" class="nav-item active" data-page="home">🏠 Home</div>
-
-    <div data-id="12" class="nav-chapter expanded" data-chapter="bms"><span data-id="13" class="arrow">▶</span> ⚡ BMS Systems</div>
-    <div data-id="14" class="nav-sub" data-parent="bms">
+    <div data-id="11" class="nav-item active" data-page="home">🏠 Home</d <div data-id="12" class="nav-chapter expanded" data-chapter="bms"><span data-id="13" class="arrow">▶</span> ⚡ BMS Systems</div>
+   
+      <div data-id="14" class="nav-sub" data-parent="bms">
       <div data-id="15" class="nav-item" data-page="bms-centralized">2.1 Centralized BMS</div>
       <div data-id="16" class="nav-item" data-page="bms-distributed">2.2 Distributed BMS</div>
       <div data-id="17" class="nav-item" data-page="bms-modular">2.3 Modular BMS</div>
@@ -192,7 +219,15 @@ body { font-family: 'Inter', system-ui, sans-serif; margin:0; background:#f8fafc
     <div data-id="65" class="nav-item" data-page="parts-store">🛒 Parts Store</div>
     <div data-id="66" class="nav-item" data-page="brand-compat">📊 Brand Compatibility</div>
     <div data-id="67" class="nav-item" data-page="glossary">📖 Glossary</div>
-  </nav>
+  </nav>    <!-- Left Sticky Sidebar Ad (Below Menu) -->
+<div class="sidebar-ad-left">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9061305074429197"
+       data-ad-slot="1000000001"
+       data-ad-format="rectangle"
+       data-full-width-responsive="false"></ins>
+</div>
 </aside>
 
 <!-- MAIN -->
@@ -218,6 +253,15 @@ body { font-family: 'Inter', system-ui, sans-serif; margin:0; background:#f8fafc
       </div>
     </div>
   </header>
+  <!-- Header Banner Ad -->
+  <div class="header-ad">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9061305074429197"
+         data-ad-slot="1000000002"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+</div>
 
   <main data-id="82" class="max-w-4xl mx-auto px-4 md:px-8 py-6">
 
@@ -258,14 +302,38 @@ body { font-family: 'Inter', system-ui, sans-serif; margin:0; background:#f8fafc
       </div>
     </div>
 
-    <!-- ALL CONTENT PAGES RENDERED BY JS -->
+    <!-- ALL CONTENT PAGES RENDERED BY JS -->function initAds() {
+  try {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  } catch (e) {}
+}
+
     <div data-id="142" id="content-target"></div>
+<!-- In-Content Ad -->
+<div class="incontent-ad">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9061305074429197"
+       data-ad-slot="1000000005"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+</div>
 
   </main>
 
   <footer data-id="143" class="border-t border-surface-300 py-8 text-center mt-12">
     <p data-id="144" class="text-sm text-navy-600 font-medium">E-Fixy — Free E-Bike &amp; Scooter Repair Guide | Built for Riders by Riders | ⚡ Always Free</p>
     <p data-id="145" class="text-xs text-navy-600 mt-2">Made by Copilot</p>
+    <!-- Footer Banner Ad -->
+<div class="footer-ad">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9061305074429197"
+       data-ad-slot="1000000004"
+       data-ad-format="horizontal"
+       data-full-width-responsive="true"></ins>
+</div>
+
   </footer>
 </div>
 
@@ -1729,5 +1797,15 @@ handleResize();
 // Initialize ads on home page after DOM is ready
 setTimeout(initAds, 200);
 </script>
+<!-- Sticky Bottom Mobile Ad -->
+<div class="mobile-sticky-ad">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9061305074429197"
+       data-ad-slot="1000000003"
+       data-ad-format="horizontal"
+       data-full-width-responsive="true"></ins>
+</div>
+  
 </body>
 </html>
